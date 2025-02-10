@@ -38,14 +38,14 @@ where the sum runs over all proposed **student-tutor-examiner triplets** $\{s,t,
   - $\sigma_i = 1$ for the most preferred topic
   - $\sigma_i = -1$ for the least preferred topic
   - $\sum \sigma_i = 0$
-- **Lecturer Topics$\vec \phi$**: A vector encoding lecturer expertise, e.g.,
+- **Lecturer Topics $\vec \phi$**: A vector encoding lecturer expertise, e.g.,
   - $\vec \phi = (0,0,f,f,0,0,0,0,f)$, where **$f$** is normalized so that $||\vec \phi|| = \sum f^2 = 1$.
 - **Constants**:
-  - $\lambda > 0$**encourages triplets with overlapping interests**.
-  - $\beta > 0$**promotes tutor-examiner topic alignment** (to avoid mismatched evaluations).
-  - **Weights**$\tau$(tutor) and $\epsilon$(examiner) allow prioritization of roles for specific lecturers.
-    - By default, $\tau = \epsilon = 1$for all lecturers.
-    - Adjusting these values allows constraints, e.g., **to avoid a lecturer tutoring in consecutive years,** set $\tau = 0.1$for that lecturer.
+  - $\lambda > 0$ **encourages triplets with overlapping interests**.
+  - $\beta > 0$ **promotes tutor-examiner topic alignment** (to avoid mismatched evaluations).
+  - **Weights** $\tau$ (tutor) and $\epsilon$ (examiner) allow prioritization of roles for specific lecturers.
+    - By default, $\tau = \epsilon = 1$ for all lecturers.
+    - Adjusting these values allows constraints, e.g., **to avoid a lecturer tutoring in consecutive years,** set $\tau = 0.1$ for that lecturer.
   - The overall influence of **role preferences** is controlled via **$\eta$**.
 
 ### Optimization Strategy
