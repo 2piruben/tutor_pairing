@@ -39,7 +39,7 @@ where the sum runs over all proposed **student-tutor-examiner triplets** $\{s,t,
   - $\sigma_i = -1$ for the least preferred topic
   - $\sum \sigma_i = 0$
 - **Lecturer Topics $\vec \phi$**: A vector encoding lecturer expertise, e.g.,
-  - $\vec \phi = (0,0,f,f,0,0,0,0,f)$, where **$f$** is normalized so that $||\vec \phi|| = \sum f^2 = 1$.
+  - $\vec \phi = (0,0,f,f,0,0,0,0,f)$, where $f$ is normalized so that $||\vec \phi|| = \sum f^2 = 1$.
 - **Constants**:
   - $\lambda > 0$ **encourages triplets with overlapping interests**.
   - $\beta > 0$ **promotes tutor-examiner topic alignment** (to avoid mismatched evaluations).
