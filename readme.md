@@ -34,7 +34,7 @@ $L = \sum_{\{s,t,e\}} \langle \vec \sigma_s, \vec \phi_t \rangle + \lambda \lang
 where the sum runs over all proposed **student-tutor-examiner triplets** $\{s,t,e\}$.
 
 ### Elements of the Score Function
-- **Student Preferences \( \vec \sigma_s$**: A vector encoding the student's ranked topic choices, where:
+- **Student Preferences $\vec \sigma_s$**: A vector encoding the student's ranked topic choices, where:
   - $\sigma_i = 1$ for the most preferred topic
   - $\sigma_i = -1$ for the least preferred topic
   - $\sum \sigma_i = 0$
