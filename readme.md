@@ -50,6 +50,6 @@ where the sum runs over all proposed **student-tutor-examiner triplets** $\{s,t,
 
 ### Optimization Strategy
 1. **Greedy Initialization**:
-   - Tutors and examiners are initially assigned based on **at least one shared topic of interest**.
+   - Tutors and examiners are initially assigned greedily attempting to share **at least one shared topic of interest**.
 2. **Simulated Annealing Refinement**:
    - The initial assignments are **iteratively optimized** to maximize the total score $L$.
