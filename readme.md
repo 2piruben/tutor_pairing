@@ -28,9 +28,8 @@ The matching algorithm optimizes assignments using a **score function**, which c
 
 The score function is:
 
-\[
-L = \sum_{\{s,t,e\}} \langle \vec \sigma_s, \vec \phi_t \rangle + \lambda \langle \vec \sigma_s,\vec \phi_t,\vec \phi_e \rangle + \beta \langle \vec \phi_t,\vec \phi_e \rangle + \eta (\tau_t + \epsilon_e)
-\]
+
+$L = \sum_{\{s,t,e\}} \langle \vec \sigma_s, \vec \phi_t \rangle + \lambda \langle \vec \sigma_s,\vec \phi_t,\vec \phi_e \rangle + \beta \langle \vec \phi_t,\vec \phi_e \rangle + \eta (\tau_t + \epsilon_e)$
 
 where the sum runs over all proposed **student-tutor-examiner triplets** \( \{s,t,e\} \).
 
