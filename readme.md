@@ -31,29 +31,25 @@ The score function is:
 
 $L = \sum_{\{s,t,e\}} \langle \vec \sigma_s, \vec \phi_t \rangle + \lambda \langle \vec \sigma_s,\vec \phi_t,\vec \phi_e \rangle + \beta \langle \vec \phi_t,\vec \phi_e \rangle + \eta (\tau_t + \epsilon_e)$
 
-where the sum runs over all proposed **student-tutor-examiner triplets** $ \{s,t,e\} $.
+where the sum runs over all proposed **student-tutor-examiner triplets** $\{s,t,e\}$.
 
 ### Elements of the Score Function
-- **Student Preferences \( \vec \sigma_s $**: A vector encoding the student's ranked topic choices, where:
-  - $ \sigma_i = 1 $ for the most preferred topic
-  - $ \sigma_i = -1 $ for the least preferred topic
-  - $ \sum \sigma_i = 0 $
-- **Lecturer Topics $ \vec \phi $**: A vector encoding lecturer expertise, e.g.,
-  - $ \vec \phi = (0,0,f,f,0,0,0,0,f) $, where **$ f $** is normalized so that $ ||\vec \phi|| = \sum f^2 = 1 $.
+- **Student Preferences \( \vec \sigma_s$**: A vector encoding the student's ranked topic choices, where:
+  - $\sigma_i = 1$ for the most preferred topic
+  - $\sigma_i = -1$ for the least preferred topic
+  - $\sum \sigma_i = 0$
+- **Lecturer Topics$\vec \phi$**: A vector encoding lecturer expertise, e.g.,
+  - $\vec \phi = (0,0,f,f,0,0,0,0,f)$, where **$f$** is normalized so that $||\vec \phi|| = \sum f^2 = 1$.
 - **Constants**:
-  - $ \lambda > 0 $ **encourages triplets with overlapping interests**.
-  - $ \beta > 0 $ **promotes tutor-examiner topic alignment** (to avoid mismatched evaluations).
-  - **Weights** $ \tau $ (tutor) and $ \epsilon $ (examiner) allow prioritization of roles for specific lecturers.
-    - By default, $ \tau = \epsilon = 1 $ for all lecturers.
-    - Adjusting these values allows constraints, e.g., **to avoid a lecturer tutoring in consecutive years,** set $ \tau = 0.1 $ for that lecturer.
-  - The overall influence of **role preferences** is controlled via **$ \eta $**.
+  - $\lambda > 0$**encourages triplets with overlapping interests**.
+  - $\beta > 0$**promotes tutor-examiner topic alignment** (to avoid mismatched evaluations).
+  - **Weights**$\tau$(tutor) and $\epsilon$(examiner) allow prioritization of roles for specific lecturers.
+    - By default, $\tau = \epsilon = 1$for all lecturers.
+    - Adjusting these values allows constraints, e.g., **to avoid a lecturer tutoring in consecutive years,** set $\tau = 0.1$for that lecturer.
+  - The overall influence of **role preferences** is controlled via **$\eta$**.
 
 ### Optimization Strategy
 1. **Greedy Initialization**:
    - Tutors and examiners are initially assigned based on **at least one shared topic of interest**.
 2. **Simulated Annealing Refinement**:
-   - The initial assignments are **iteratively optimized** to maximize the total score $ L $.
-
----
-
-This README provides an overview of the methodology used for tutor-examiner pairing. For more details, refer to **`pairing.ipynb`**.
+   - The initial assignments are **iteratively optimized** to maximize the total score $L$.
