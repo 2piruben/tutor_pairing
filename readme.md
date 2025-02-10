@@ -7,8 +7,8 @@ This repository contains the code used to assign **tutors and examiners** to stu
 The pairing process is handled by the notebook **`pairing.ipynb`**, which:
 
 - **Inputs**:
-  - Lecturer areas of expertise: **`lecturers.xlsx`**
-  - Student topic preferences: **`students.xlsx`**
+  - Lecturer areas of expertise: **`lecturers.xlsx`** (anonymised in this public repo)
+  - Student topic preferences: **`students.xlsx`** (anonymised in this public repo)
 - **Outputs**:
   - A preliminary pairing: **`preliminary_pairing.csv`**
   - An optimized pairing: **`annealed_pairing.csv`**
