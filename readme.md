@@ -7,8 +7,8 @@ This repository contains the code used to assign **tutors and examiners** to stu
 The pairing process is handled by the notebook **`pairing.ipynb`**, which:
 
 - **Inputs**:
-  - Lecturer areas of expertise: **`lecturers.xlsx`** (anonymised in this public repo)
-  - Student topic preferences: **`students.xlsx`** (anonymised in this public repo)
+  - Lecturer areas of expertise: **`lecturers.xlsx`** (synthetic in this public repo)
+  - Student topic preferences: **`students.xlsx`** (synthetic in this public repo)
 - **Outputs**:
   - A preliminary pairing: **`preliminary_pairing.csv`**
   - An optimized pairing: **`annealed_pairing.csv`**
@@ -16,7 +16,7 @@ The pairing process is handled by the notebook **`pairing.ipynb`**, which:
 The notebook **matches each student with a tutor and an examiner** by maximizing the **overlap in research interests**.
 
 - **Each lecturer** is assigned at least **two topics** they can supervise.
-- **Each student** selects **three topics** in order of preference.
+- **Each student** ranks all the topics in order of preference.
 
 ## Matching Algorithm
 The matching algorithm optimizes assignments using a **score function**, which considers:
