@@ -47,6 +47,7 @@ where the sum runs over all proposed **student-tutor-examiner triplets** $\{s,t,
     - By default, $\tau = \epsilon = 1$ for all lecturers.
     - Adjusting these values allows constraints, e.g., **to avoid a lecturer tutoring in consecutive years,** set $\tau = 0.1$ for that lecturer.
   - The overall influence of **role preferences** is controlled via **$\eta$**.
+  - The algorithm also forbids tutors getting more than 1 role. 
 
 ### Optimization Strategy
 1. **Greedy Initialization**:
